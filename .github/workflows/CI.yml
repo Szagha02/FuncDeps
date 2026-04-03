@@ -1,9 +1,21 @@
+
+---
+
+# GitHub Actions
+
+## `.github/workflows/CI.yml`
+
+```yaml
 name: CI
 
 on:
   push:
     branches: [main]
   pull_request:
+
+permissions:
+  actions: write
+  contents: read
 
 jobs:
   test:
@@ -13,11 +25,15 @@ jobs:
         version: ['1.10', '1.11']
     steps:
       - uses: actions/checkout@v4
+
       - uses: julia-actions/setup-julia@v2
         with:
           version: ${{ matrix.version }}
+
       - uses: julia-actions/cache@v2
+
       - name: Instantiate
         run: julia --project=. -e 'using Pkg; Pkg.instantiate()'
+
       - name: Test
         run: julia --project=. -e 'using Pkg; Pkg.test()'
