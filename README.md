@@ -67,6 +67,13 @@ write_module_focus_dot(infos, "Creation", "module_focus.dot")
 
 write_file_focus_dot(infos, "ImportData.jl", "file_focus.dot")
 
+## Running Using a CLI script instead of the API:
+
+git clone https://github.com/Szagha02/FuncDeps.git
+cd FuncDeps
+julia --project=. -e "using Pkg; Pkg.instantiate()"
+julia --project=. bin/run_scan.jl "C:\path\to\target\src" --html
+
 ## Basic Usage:
 
 julia --project=. bin/run_scan.jl "C:\path\to\your\package\src"
