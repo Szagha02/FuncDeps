@@ -50,15 +50,21 @@ using FuncDeps
 And then some sample runs:
 
 infos = scan_project("C:/path/to/some/package/src")
+
 write_module_dot(infos, "moduledeps.dot")
+
 write_cross_module_dot(infos, "funcdeps_cross_module.dot")
+
 write_full_dot(infos, "funcdeps_full.dot")
+
 write_interactive_html(infos, "interactive_graph.html")
 
 for focus views:
 
 write_function_focus_dot(infos, "Structs.fusion_ring", "function_focus.dot"; depth=2)
+
 write_module_focus_dot(infos, "Creation", "module_focus.dot")
+
 write_file_focus_dot(infos, "ImportData.jl", "file_focus.dot")
 
 ## Basic Usage:
