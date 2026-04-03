@@ -1,0 +1,13 @@
+name = "FuncDeps"
+uuid = "4f6c6f87-7d0d-4c53-9d4b-2b5b4d6b8c31"
+version = "0.1.0"
+authors = ["Sami Zagha"]
+
+[compat]
+julia = "1.10"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]

@@ -1,0 +1,6 @@
+[deps]
+Documenter = "e30172f5-a6a5-5a46-863b-614d45cd2de4"
+FuncDeps = "4f6c6f87-7d0d-4c53-9d4b-2b5b4d6b8c31"
+
+[compat]
+Documenter = "1"
